@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+<style type="text/css">
+#registerForm {
+	position: fixed;
+	top: 40%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+}
+
+#hfpd {
+	font-size: 50px;
+	color: yellow;
+	font-family: Sans;
+}
+
+#link {
+	font-size: 30px;
+	color: red;
+	font-family: Sans;
+}
+</style>
+</head>
+<body background="login_background.png">
+	<div id="registerForm">
+		<form method="post" action="registeruser">
+
+			<table width="100%" height="100%" cellpadding="20">
+				<thead>
+					<tr>
+						<th colspan="4" rowspan="4"><span id=hfpd>Hassle-free
+								parking Registration</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>NAME</td>
+						<td><input type="text" name="name" /></td>
+					</tr>
+					<tr>
+						<td>USERNAME</td>
+						<td><input type="text" name="username" /></td>
+					</tr>
+					<tr>
+						<td>ADDRESS</td>
+						<td><input type="text" name="address" /></td>
+					</tr>
+					<tr>
+						<td>PHONE NUMBER</td>
+						<td><input type="number" name="number" /></td>
+					</tr>
+					<tr>
+						<td>PASSWORD</td>
+						<td><input type="password" name="pass" /></td>
+					</tr>
+					<tr>
+						<td>CONFIRM PASSWORD</td>
+						<td><input type="password" name="confirmpass" /></td>
+					</tr>
+					<tr>
+						<td align="center"><input type="submit" value="Submit" /></td>
+					</tr>
+<!-- 					<tr> -->
+<!-- 						<td colspan="2" align="center"><span id=link> <a href="login.html">Login -->
+<!-- 									Here</a></span></td> -->
+<!-- 					</tr> -->
+				</tbody>
+			</table>
+
+		</form>
+	</div>
+</body>
+</html>

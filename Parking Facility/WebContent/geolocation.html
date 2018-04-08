@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Smart Parking</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="./geoStyle.css">
+<script src="./geoScript.js"></script>
+</head>
+
+<body>
+
+	<div class="left"></div>
+
+	<div id="out"></div>
+
+	<div id="ui">
+		<div id="upper">
+			<div id="data">
+				<font color="White" size=6px face="Georgia"><center>Smart
+						Parking</center></font>
+
+				<form>
+					<input type="text" id="userloc" class="controls"
+						name="Your Location" placeholder="Your Location" color="white"><br>
+					<input type="text" id="dest" name="Destination"
+						placeholder="Destination">
+				</form>
+			</div>
+			<div id="img">
+				<img src="./srcdest.png" alt="img" width="60"
+					height="67">
+			</div>
+		</div>
+
+		<div id="action">
+			<button id="bt" onclick="addList()" value="click" width="70%"
+				height="50%" color="white">Find parkings near me</button>
+		</div>
+
+		<div id="addList"
+			style='overflow: scroll; overflow-x: scroll; overflow-y: scroll;'>
+			<table id="header" face="Open Sans Condensed Bold" color="#617FB9">
+				<tr>
+					<th onMouseover="this.bgColor='#EEEEEE'"
+						onMouseout="this.bgColor='#FFFFFF'">Parking name</th>
+					<th onMouseover="this.bgColor='#EEEEEE'"
+						onMouseout="this.bgColor='#FFFFFF'">Total capacity</th>
+					<th onMouseover="this.bgColor='#EEEEEE'"
+						onMouseout="this.bgColor='#FFFFFF'">Vacant slots</th>
+					<th onMouseover="this.bgColor='#EEEEEE'"
+						onMouseout="this.bgColor='#FFFFFF'">Distance</th>
+					<th onMouseover="this.bgColor='#EEEEEE'"
+						onMouseout="this.bgColor='#FFFFFF'">Price</th>
+				</tr>
+			</table>
+			<table id="myTable">
+
+			</table>
+		</div>
+		<div id="metrics"></div>
+	</div>
+
+
+	<div id="map">
+
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6TAGu__OAMX4DvYU1T_s_oe7o7t5zGXQ &libraries=places&callback=initMap">
+			
+		</script>
+
+		<div id="mapPark"></div>
+
+	</div>
+	<div id="directions" background="#000000" width="200" height="200">
+		<button id="bt1" onclick="showpanel()">Routes and Directions</button>
+		<div id="panel" style='overflow-y: scroll;'></div>
+	</div>
+</body>
+
+
+</html>
